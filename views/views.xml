@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="medix_master.list">
+      <field name="name">MedixMaster list</field>
+      <field name="model">medix_master.medix_master</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="medix_master.action_window">
+      <field name="name">MedixMaster window</field>
+      <field name="res_model">medix_master.medix_master</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="medix_master.action_server">
+      <field name="name">MedixMaster server</field>
+      <field name="model_id" ref="model_medix_master_medix_master"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="MedixMaster" id="medix_master.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="medix_master.menu_1" parent="medix_master.menu_root"/>
+    <menuitem name="Menu 2" id="medix_master.menu_2" parent="medix_master.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="medix_master.menu_1_list" parent="medix_master.menu_1"
+              action="medix_master.action_window"/>
+    <menuitem name="Server to list" id="medix_master" parent="medix_master.menu_2"
+              action="medix_master.action_server"/>
+-->
+  </data>
+</odoo>
